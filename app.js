@@ -233,109 +233,140 @@ promise()
 ======================================= Answer =====================================*/
 
     
-const myPromise = new Promise((resolve,reject)=>{
-    let color = ['red','blue','green'];
-let random = Math.random()*color.length;
-    random = Math.floor(random);
-    let result = color[random];
-    if(result === 'blue')resolve('ok')
-        else reject('not ok')
-})
-myPromise 
-.then((resolve)=>{console.log(resolve)})
-.catch((reject)=>{console.log(reject)})
-.finally(()=>{console.log('operation completed')})
+// const myPromise = new Promise((resolve,reject)=>{
+//     let color = ['red','blue','green'];
+// let random = Math.random()*color.length;
+//     random = Math.floor(random);
+//     let result = color[random];
+//     if(result === 'blue')resolve('ok')
+//         else reject('not ok')
+// })
+// myPromise 
+// .then((resolve)=>{console.log(resolve)})
+// .catch((reject)=>{console.log(reject)})
+// .finally(()=>{console.log('operation completed')})
+
+
+
+/*==================================== Question No 12 =========================================
+.reverse()
+======================================= Answer =====================================*/
+// let num = [2,3,4,5,6,8,9];
+// num.reverse();
+// console.log(num)
+
+/*==================================== Question No 13 =========================================
+leap year
+======================================= Answer =====================================*/
+// let year = 2001;
+// if((year%4 === 0 && year % 100 !== 0)|| year % 400 === 0){console.log('leap year')}
+// else{console.log('not leap year')}
+
+/*==================================== Question No 14 =========================================
+age finder
+======================================= Answer =====================================*/
+// let current = new Date();
+// let required = new Date('09 09 1992');
+// console.log(current);
+// console.log(required);
+// let currentInMillisecods = current.getTime();
+// console.log(currentInMillisecods);
+// let requiredInMilliseconds = required.getTime();
+// console.log(requiredInMilliseconds);
+// let age = currentInMillisecods - requiredInMilliseconds;
+// console.log(age);
+// let finalResult = age/(1000*60*60*24*30*12);
+// console.log(finalResult)
 
 
 
 
+/*==================================== Question No 15 =========================================
+object length
+======================================= Answer =====================================*/
+// let student = {name : 'Aziz',
+//     age : 23,
+//     course : 'web development'
+// }
+// console.log(Object.keys(student).length)
 
-/*==================================== Question No 1 =========================================
+/*==================================== Question No 16 =========================================
+get data of object by  for loop
+======================================= Answer =====================================*/
+// let student = {name : 'Aziz',
+//     age : 23,
+//     course : 'web development'
+// }
+// for(let key in student){console.log(`${key} : ${student[key]}`)}
+
+
+
+/*==================================== Question No 17 =========================================
+itrators of/in 
+======================================= Answer =====================================*/
+// let fruits = ['apple','mango','bnanaana'];
+// for(let element of fruits){console.log(element)}
+// for(let ind in fruits){console.log(ind)}
+// object example 
+// const student = {name : 'Aziz',
+//     age : 30,
+//     course : 'web development'
+// }
+// for(let value in student){console.log(`${value} : ${student[value]}`)}
+
+
+/*==================================== Question No 18 =========================================
+array destructuring
+======================================= Answer =====================================*/
+// let [name,age,course,designation] = ['Aziz',30,'Webdevelopment','software engineer'];
+// console.log(name);
+// console.log(age);
+// console.log(course);
+// console.log(designation)
+
+/*==================================== Question No 19 =========================================
+object destructuring
+======================================= Answer =====================================*/
+// let student = {name : 'sndleeb',
+//     color : 'white',
+//     age : 22
+// }
+// // console.log(student.name);
+// // console.log(student.color);
+// // console.log(student.age);
+// let {name,color,age} = student;
+// console.log(name);
+// console.log(color);
+// console.log(age)
+
+/*==================================== Question No 20 =========================================
+Enhanced object literals
+======================================= Answer =====================================*/
+// let name = 'sndleeb';
+// let age = 23;
+// let course = 'web development';
+// const details = {name,
+//     age ,
+//     course
+// }
+// console.log(details)
+/*==================================== Question No 21 =========================================
 
 ======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
+// let num = [1,2,3];
+// // let need = num.map((element)=>{return element*element;});
+// // console.log(need);
+// // let sum = 0;
+// // for(let i = 0;i <need.length;i++){sum = sum + need[i]
+    
+// // }
+// // console.log(sum)
+// let arr = [];
+// for(let i = 0;i < num.length;i++){arr.push(num[i]*num[i])};
+// console.log(arr);
+// let sum = 0;
+// for(let i = 0;i < arr.length;i++){sum = sum + arr[i]};
+// console.log(sum)
 
 /*==================================== Question No 1 =========================================
 
