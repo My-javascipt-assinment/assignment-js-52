@@ -648,22 +648,33 @@ repeat()
 
 
 
-/*==================================== Question No 1 =========================================
-
+/*==================================== Question No 40 =========================================
+text truncator
 ======================================= Answer =====================================*/
-function trunkate(str,length){if(str.length > length){return str.slice(0,length)+ '...';}
-else{return str}
-}
+// function trunkate(str,length){if(str.length > length){return str.slice(0,length)+ '...';}
+// else{return str}
+// }
 
-let ans =trunkate('i am learngin js',6)
-console.log(ans)
+// let ans =trunkate('i am learngin js',6)
+// console.log(ans)
 
 
 
-/*==================================== Question No 1 =========================================
-
+/*==================================== Question No 41 =========================================
+Number sequence generator
 ======================================= Answer =====================================*/
-
+// function processing(){let baseNumber = document.getElementById('input').value;
+//   baseNumber = Number(baseNumber);
+//   let lastNumber = document.getElementById('lastNumber').value;
+//   lastNumber = Number(lastNumber);
+  
+//   let output = []
+//   for(let i = baseNumber;i<= lastNumber;i++){output.push(i)}
+//   let result = document.getElementById('result');
+  
+  
+//    result.innerHTML = `[${output.join(', ')}]`;
+// }
 
 
 
