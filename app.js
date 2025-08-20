@@ -485,37 +485,20 @@ promise
 
 
 /*==================================== Question No 30 =========================================
-
+img slider
 ======================================= Answer =====================================*/
-// const numbers = [1,2,2,3,1,4,2];
-// let num1 = numbers.filter((item)=>{return item === 1})
-// console.log(num1)
-// let num2 = numbers.filter((item)=>{return item === 2})
-// console.log(num2)
-// let num3 = numbers.filter((item)=>{return item === 3})
-// console.log(num3)
-// let num4 = numbers.filter((item)=>{return item === 4})
-// console.log(num4)
-// let a = num1.at(0);
-// let aValue = num1.length;
-// let b = num2.at(0);
-// let bValue = num2.length;
-// let c = num3.at(0);
-// let cValue = num3.length;
-// let d = num4.at(0);
-// let dValue = num1.length;
-// let obj = {'a': aValue,
-//     'b': bValue,
-//     'c': cValue,
-//     'd': dValue
-// }
-// console.log(obj)
-// const numbers = ['apple','mango','apple','mango','bnanan','apple'];
-// let counts ={}
-// for(let element of numbers){counts[element] = (counts[element]|| 0)+1;}
-// console.log(counts)
-
-/*==================================== Question No 1 =========================================
+// let allSrc = ["./assets/a.jpg",
+//     "./assets/b.jpg",
+//     "./assets/c.jpg"
+// ]
+//     let first = document.getElementById('initialImg');
+//     console.log(first);
+//     let imgIndex = 0;
+//     setInterval(()=>{first.src = allSrc[imgIndex];
+//         imgIndex++;
+//         if(imgIndex >= allSrc.length){imgIndex = 0}
+//     },10000)
+/*==================================== Question No 31 =========================================
 find mode
 ======================================= Answer =====================================*/
 
@@ -544,80 +527,136 @@ find mode
 
 // let ans = findMode([1,2,6,2,7,6]);
 // console.log(ans); // This will correctly log [2, 5]
+/*==================================== Question No 32 =========================================
+img slider
+======================================= Answer =====================================*/
+
+// let allSrc = ["./assets/a.jpg", "./assets/b.jpg", "./assets/c.jpg"];
+// let first = document.getElementById('initialImg');
+// let index = 0;
+// first.src = allSrc[index]
+// function nextImg(){index++;
+//     if(index >= allSrc.length){index = 0;}
+//     first.src = allSrc[index]
+// }
+
+// function prevImg(){index--;
+//     if(index < 0){index = allSrc.length-1}
+//     first.src = allSrc[index]
+// }
+
+
+/*==================================== Question No 33 =========================================
+setInterval()
+======================================= Answer =====================================*/
+// let day = ['monday','tuesday','friday','saturday','thursday'];
+// let index = 0;
+// let display = document.getElementById('display');
+// setInterval(() => {display.innerHTML = day[index];
+//     index++;
+//     if(index >= day.length){index = 0}
+    
+// }, 1000);
+
+
+/*==================================== Question No 34 =========================================
+recursion function
+======================================= Answer =====================================*/
+// function recursion(num){if(num === 1){return 1;}
+// else{return num* recursion(num-1)}}
+// let ans = recursion(3);
+// console.log(ans)
+
+/*==================================== Question No 35 =========================================
+ternary operator
+======================================= Answer =====================================*/
+// let age = prompt('enter your age');
+// let check = (age < 20)?('your are eligible for job'):('you are overaged');
+// console.log(check)
+
+/*==================================== Question No 36 =========================================
+onblur and onfoucus
+======================================= Answer =====================================*/
+// function styl(){let get = document.getElementById('input1');
+//   get.style.width = '500px'
+// }
+// function remov(){let get = document.getElementById('input1');
+//   get.style.background = 'blue'
+// }
+
+
+/*==================================== Question No 37 =========================================
+spread operator
+======================================= Answer =====================================*/
+// let girls = ['haleema','sndleeb'];
+// let boys = ['arif','muhib'];
+// // let arr = girls.concat(boys);
+// let arr = [...girls,'saleem','junaid','bahir',...boys]
+// console.log(arr)
+// let narr = [...arr];
+// console.log(narr)
+// obj
+// const girl = {name :'sania',
+//   age : 18
+// };
+// const boy = {name : 'Hashir',
+//   age : 20
+// }
+// const merge = {name : [girl.name,boy.name],
+//   age : [girl.age,boy.age]
+// }
+// console.log(merge)
+
+// merge obj
+// const studentOne = {name :'Aziz',
+//   course :'web development'
+// }
+// const studentTwo = {name : 'klsoom',
+//   course : 'graphic designing'
+// }
+// let combine = {name : [studentOne.name,studentTwo.name],
+//   course : [studentOne.course,studentTwo.course]
+// };
+// console.log(combine)
+// const newObject = {...combine,weather: 'hot'};
+// console.log(newObject)
+ /*==================================== Question No 38 =========================================
+optional chaining
+======================================= Answer =====================================*/
+// const student = {
+//   name: "Aziz",
+//   course: { title: "Web Development" }
+// };
+
+// // ❌ Without optional chaining → Error
+// console.log(student.teacher.name); 
+// // Cannot read properties of undefined
+
+// // ✅ With optional chaining → Safe
+// console.log(student.teacher?.name); 
+// undefined (program continues)
+
+/*==================================== Question No 39 =========================================
+repeat()
+======================================= Answer =====================================*/
+// function repeating(b,m){return m > 0 ?(b.repeat(m)):(m)}
+
+// repeating('abc',8)
+
+// let ans = repeating('abc',8);
+// console.log(ans)
+
+
+
 /*==================================== Question No 1 =========================================
 
 ======================================= Answer =====================================*/
+function trunkate(str,length){if(str.length > length){return str.slice(0,length)+ '...';}
+else{return str}
+}
 
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
+let ans =trunkate('i am learngin js',6)
+console.log(ans)
 
 
 
