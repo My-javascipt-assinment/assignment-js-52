@@ -681,189 +681,261 @@ Number sequence generator
 
 
 
-/*==================================== Question No 1 =========================================
+/*==================================== Question No 42 =========================================
+check password validity
+======================================= Answer =====================================*/
 
+// function checking(){let getInput = document.getElementById('input').value;
+//     let firstCondition = /\d/.test(getInput);
+//     console.log(firstCondition);
+//     let secondCondition = (getInput.length >= 8)?(true):(false);
+//     console.log(secondCondition);
+//     let thirdCondition = /[a-z]/g.test(getInput);
+//     console.log(thirdCondition);
+//     let fourthCondition = /[A-Z]/g.test(getInput);
+//     console.log(fourthCondition);
+//     let result;
+//     if(firstCondition && secondCondition && thirdCondition && fourthCondition){result = 'Valid Password'}
+//     else{result = 'Invalid Password'}
+//     let display = document.getElementById('result');
+//     display.innerHTML = result;
+// }
+
+
+/*==================================== Question No 43 =========================================
+fetch api
+======================================= Answer =====================================*/
+// https://jsonplaceholder.typicode.com = base url
+// /users = end point
+
+// post for saving data in DB 
+// get : take data from server/DB 
+// put : update data in DB 
+// Delete : delete data from DB
+
+
+// const apiUrl = "https://jsonplaceholder.typicode.com/users";
+
+// const fetchUserData = ()=>{fetch(apiUrl)
+//     .then((success)=>{
+//          return success.json()
+//     })
+//     .then((actualData)=>{console.log('users: ', actualData)})
+//     .catch((err)=>{console.log('something went wrong ',err)})
+// }
+// fetchUserData();
+
+
+ // 1. Get data from API
+    // fetch("https://jsonplaceholder.typicode.com/users")
+    //   .then(response => response.json()) // 2. Convert response to JSON
+    //   .then(data => {
+    //     // 3. Use map() to create HTML for each user
+    //     let cards = data.map(user => {
+    //       return `<p>${user.name} - ${user.email}</p>`;
+    //     });
+
+    //     // 4. Join the array into one string
+    //     //    and put it inside #output
+    //     document.getElementById("output").innerHTML = cards.join("");
+    //   });
+
+
+
+
+/*==================================== Question No 44 =========================================
+show object data on dom by map
+======================================= Answer =====================================*/
+// const obj = [{id : 1,
+//     name:'star'
+// },
+// {id : 2,
+//     name : 'sun'
+// },
+// {id : 3, 
+//     name : 'land'
+// }]
+// //  // Use map() to create HTML for each object
+// //     let items = obj.map(item => {
+// //       return `<p>${item.id} - ${item.name}</p>`;
+// //     });
+
+// //     // Put the result into the DOM
+// //     document.getElementById("output").innerHTML = items.join("");
+// let data = obj.map((item)=>{return `<p>${item.id} - ${item.name}</p>`});
+// document.getElementById('output').innerHTML = data.join("");
+
+
+/*==================================== Question No 45 =========================================
+fetch data and display on dom
+======================================= Answer =====================================*/
+// let ul = document.getElementById('ul');
+// const renderData = (apiLearning)=>{console.log(apiLearning);
+//     if(Array.isArray(apiLearning) && apiLearning.length >0){
+//         ul.innerHTML = apiLearning?.map((item)=>{return `<li>${item?.name}</li>`}).join('')
+//     }
+// }
+
+// function apiLearning(){const apiData = "https://dummyjson.com/users";
+//     fetch(apiData)
+//     .then((success)=>{return success.json()})
+//     .then((actualData)=>{console.log('actualData : ',actualData);
+//         actualData && renderData(actualData.users)
+//     })
+//     .catch((err)=>{console.log('something wrong :',err)})
+// }
+// apiLearning()
+
+
+// let ul = document.getElementById('ul');
+
+// const renderData = (apiLearning) => {
+//     console.log(apiLearning);
+//     if (Array.isArray(apiLearning) && apiLearning.length > 0) {
+//         ul.innerHTML = apiLearning
+//             .map((item) => `<li>${item?.firstName} ${item?.lastName}</li>`)
+//             .join('');
+//     }
+// };
+
+// function apiLearning() {
+//     const apiData = "https://dummyjson.com/users";
+//     fetch(apiData)
+//         .then((success) => success.json())
+//         .then((actualData) => {
+//             console.log('actualData : ', actualData);
+//             // Pass only the users array
+//             actualData && renderData(actualData.users);
+//         })
+//         .catch((err) => console.log('something wrong :', err));
+// }
+
+// apiLearning();
+/*==================================== Question No 46 =========================================
+Task 1: Show Users List
+
+Use this API: https://dummyjson.com/users
+
+Fetch data and display only user names in a list <ul><li>...</li></ul>.
+======================================= Answer =====================================*/
+// let ul = document.getElementById('ul');
+// function render(api){if(Array.isArray(api) && api.length >0)
+// {ul.innerHTML = api.map((item)=>{return (`<li>${item?.id}-${item?.age}-${item?.firstName}-${item?.lastName}</li>`)}).join('')}
+// }
+
+// function api(){const apiUrl = "https://dummyjson.com/users";
+//     fetch(apiUrl)
+//     .then((success)=>{return success.json()})
+//     .then((realData)=>{console.log(realData);
+//         realData && render(realData.users)
+//     })
+//     .catch((err)=>{console.log(err)})
+//  }
+// api()
+
+
+
+/*==================================== Question No 47 =========================================
+✅ Task 2: Show User with Image
+
+From the same API, also show each user’s profile picture and name.
+
+Display them inside a card (like <div> with image + name).
+Use this API: https://dummyjson.com/users;
+======================================= Answer =====================================*/
+// let ul = document.getElementById('ul');
+// function showData(api){if(Array.isArray(api) && api.length > 0){
+//      ul.innerHTML = api.map((item)=>{return  `<li>${item.age}</li>`}).join('')
+//     return
+// }}
+
+// function api(){const apiUrl = "https://dummyjson.com/users";
+//     fetch(apiUrl)
+//     .then((success)=>{return success.json()})
+//     .then((realData)=>{console.log(realData);
+//         realData && showData(realData.users)
+//     })
+//     .catch((err)=>{console.log(err)})
+// }
+
+// api()
+
+/*==================================== Question No 48 =========================================
+fetch img from api
+======================================= Answer =====================================*/
+// "https://dummyjson.com/users";
+// 
+
+// let userDiv = document.getElementById('users');
+
+// function renderData(api) {
+//     if (Array.isArray(api) && api.length > 0) {
+//         userDiv.innerHTML = api.map((item) => {
+//             return `
+//                 <div class="card">
+//                     <img src="${item.image}" alt="${item.firstName}">
+//                     <h3>${item.firstName} ${item.lastName}</h3>
+//                 </div>
+//             `;
+//         }).join('');
+//     }
+// }
+
+// function api() {
+//     const apiUrl = "https://dummyjson.com/users";
+//     fetch(apiUrl)
+//         .then((success) => success.json())
+//         .then((realData) => {
+//             console.log(realData);
+//             renderData(realData.users);
+//         })
+//         .catch((err) => console.log(err));
+// }
+
+// api();
+
+
+
+
+/*==================================== Question No 49 =========================================
+fetch api
+======================================= Answer =====================================*/
+// https://www.olx.com.pk/cars_c84
+// let ul = document.getElementById('ul');
+// function render(api){if(Array.isArray(api) && api.length > 0){
+//     ul.innerHTML = api.map((item)=>{return `
+//         <li>${item.id} - ${item.postId} - ${item.likes}</li>`}).join('');
+// }}
+
+
+// function api(){const apiUrl = "https://dummyjson.com/comments";
+//     fetch(apiUrl)
+//     .then((success)=>{return success.json()})
+//     .then((realData)=>{console.log(realData)
+//         render(realData.comments)
+//     })
+//     .catch((err)=>{console.log(err)})
+// }
+
+
+// api()
+
+
+
+/*==================================== Question No 50 =========================================
+random color generator
 ======================================= Answer =====================================*/
 
 
+let chars = "0123456789abcdef";
+let color = "#";
+for (let i = 0; i < 6; i++) {
 
+    let randomIndex = Math.floor(Math.random()*chars.length);
+    color = color + chars[randomIndex]
+}
 
+console.log(color); // Example: #3fae9c
+document.getElementById("ul").style.background = color;
 
 
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
